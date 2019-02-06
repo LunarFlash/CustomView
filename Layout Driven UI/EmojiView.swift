@@ -32,7 +32,6 @@ class EmojiView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        print(emojiLabel)
     }
 
     // To init view from xib or storyboard
@@ -48,7 +47,6 @@ class EmojiView: UIView {
     }
 
     private func commonInit() {
-        print(EmojiView.xibName)
         Bundle.main.loadNibNamed(EmojiView.xibName, owner: self, options: nil)
     }
 
