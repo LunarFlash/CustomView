@@ -17,6 +17,7 @@ class EmojiView: UIView {
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var feelingLabel: UILabel!
 
+
     enum Feeling {
         case groovy
         case meh
