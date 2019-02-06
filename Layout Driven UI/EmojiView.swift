@@ -11,6 +11,9 @@ import UIKit
 @IBDesignable
 class EmojiView: UIView {
 
+    private static let xibName = "EmojiView"
+
+    @IBOutlet var contentView: UIView!
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var feelingLabel: UILabel!
 
@@ -34,17 +37,18 @@ class EmojiView: UIView {
     // To init view from xib or storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupView()
+        commonInit()
     }
 
     // To init from code
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
+        commonInit()
     }
 
-    private func setupView() {
-        feeling = .groovy
+    private func commonInit() {
+        print(EmojiView.xibName)
+        Bundle.main.loadNibNamed(EmojiView.xibName, owner: self, options: nil)
     }
 
     override func layoutSubviews() {
