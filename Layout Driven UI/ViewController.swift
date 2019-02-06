@@ -11,10 +11,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
+    @IBOutlet weak var emojiView: EmojiView!
 
     @IBAction func didSelectMood(_ sender: UISegmentedControl) {
-
+        if sender.selectedSegmentIndex == 0 {
+            emojiView.feeling = .groovy
+        } else {
+            emojiView.feeling = .meh
+        }
     }
 
 

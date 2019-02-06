@@ -13,6 +13,7 @@
 		9D875459220B50810049BE4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D875458220B50810049BE4E /* Assets.xcassets */; };
 		9D87545C220B50810049BE4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D87545A220B50810049BE4E /* LaunchScreen.storyboard */; };
 		9D875464220B56550049BE4E /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D875463220B56550049BE4E /* EmojiView.swift */; };
+		9D875466220B7C880049BE4E /* EmojiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D875465220B7C880049BE4E /* EmojiView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9D87545B220B50810049BE4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D87545D220B50810049BE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D875463220B56550049BE4E /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		9D875465220B7C880049BE4E /* EmojiView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmojiView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				9D875451220B507F0049BE4E /* AppDelegate.swift */,
 				9D875453220B507F0049BE4E /* ViewController.swift */,
+				9D875465220B7C880049BE4E /* EmojiView.xib */,
 				9D875455220B507F0049BE4E /* Main.storyboard */,
 				9D875458220B50810049BE4E /* Assets.xcassets */,
 				9D87545A220B50810049BE4E /* LaunchScreen.storyboard */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D87545C220B50810049BE4E /* LaunchScreen.storyboard in Resources */,
+				9D875466220B7C880049BE4E /* EmojiView.xib in Resources */,
 				9D875459220B50810049BE4E /* Assets.xcassets in Resources */,
 				9D875457220B507F0049BE4E /* Main.storyboard in Resources */,
 			);

@@ -26,17 +26,31 @@ class EmojiView: UIView {
         }
     }
 
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print(emojiLabel)
     }
-    */
+
+    // To init view from xib or storyboard
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupView()
+    }
+
+    // To init from code
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+
+    private func setupView() {
+        feeling = .groovy
+    }
 
     override func layoutSubviews() {
         super.layoutSubviews()
+
+        guard emojiLabel != nil, feelingLabel != nil else { return }
 
         switch feeling {
         case .groovy:
@@ -47,7 +61,5 @@ class EmojiView: UIView {
             feelingLabel.text = "Meh"
         }
     }
-
-
 
 }
