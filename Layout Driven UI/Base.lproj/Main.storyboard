@@ -28,44 +28,46 @@
                                     <action selector="didSelectMood:" destination="BYZ-38-t0r" eventType="valueChanged" id="70Y-6o-Bhd"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TL3-ba-9rm" customClass="EmojiView" customModule="Layout_Driven_UI" customModuleProvider="target">
-                                <rect key="frame" x="16" y="114" width="343" height="491"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xs-Ag-5nc">
-                                        <rect key="frame" x="106.66666666666669" y="174" width="130" height="143.33333333333337"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling groovy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwC-cg-A3K">
-                                        <rect key="frame" x="115.33333333333334" y="320" width="112.33333333333334" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="jwC-cg-A3K" firstAttribute="firstBaseline" secondItem="1xs-Ag-5nc" secondAttribute="baseline" constant="48" symbolType="layoutAnchor" id="9Ts-uA-aCc"/>
-                                    <constraint firstItem="1xs-Ag-5nc" firstAttribute="centerX" secondItem="TL3-ba-9rm" secondAttribute="centerX" id="FAg-0D-DRe"/>
-                                    <constraint firstItem="1xs-Ag-5nc" firstAttribute="centerY" secondItem="TL3-ba-9rm" secondAttribute="centerY" id="U5E-Ie-vQW"/>
-                                    <constraint firstItem="jwC-cg-A3K" firstAttribute="centerX" secondItem="TL3-ba-9rm" secondAttribute="centerX" id="bhf-t2-auq"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TL3-ba-9rm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="3Kw-nb-lWq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TL3-ba-9rm" secondAttribute="trailing" constant="16" id="D6N-dJ-Kud"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ybn-Jl-v0Q" secondAttribute="bottom" constant="70" id="XnU-8H-YnC"/>
-                            <constraint firstItem="ybn-Jl-v0Q" firstAttribute="top" secondItem="TL3-ba-9rm" secondAttribute="bottom" constant="75" id="eFl-9X-asY"/>
                             <constraint firstItem="ybn-Jl-v0Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k4a-av-3OK"/>
-                            <constraint firstItem="TL3-ba-9rm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p6r-aH-a6U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="TL3-ba-9rm" customClass="EmojiView" customModule="Layout_Driven_UI" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="491"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xs-Ag-5nc">
+                            <rect key="frame" x="106.66666666666669" y="174" width="130" height="143.33333333333337"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling groovy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwC-cg-A3K">
+                            <rect key="frame" x="115.33333333333334" y="320" width="112.33333333333334" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="jwC-cg-A3K" firstAttribute="firstBaseline" secondItem="1xs-Ag-5nc" secondAttribute="baseline" constant="48" symbolType="layoutAnchor" id="9Ts-uA-aCc"/>
+                        <constraint firstItem="1xs-Ag-5nc" firstAttribute="centerX" secondItem="TL3-ba-9rm" secondAttribute="centerX" id="FAg-0D-DRe"/>
+                        <constraint firstItem="1xs-Ag-5nc" firstAttribute="centerY" secondItem="TL3-ba-9rm" secondAttribute="centerY" id="U5E-Ie-vQW"/>
+                        <constraint firstItem="jwC-cg-A3K" firstAttribute="centerX" secondItem="TL3-ba-9rm" secondAttribute="centerX" id="bhf-t2-auq"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="ptE-fc-nao"/>
+                    <connections>
+                        <outlet property="emojiLabel" destination="1xs-Ag-5nc" id="avV-tR-ylN"/>
+                        <outlet property="feelingLabel" destination="jwC-cg-A3K" id="9zg-j6-cfM"/>
+                    </connections>
+                </view>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="25.862068965517242"/>
         </scene>
