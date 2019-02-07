@@ -23,9 +23,11 @@ class EmojiView: UIView {
         case meh
     }
 
-
+    /// State variable denoting the feeling of this view.
     var feeling: Feeling = Feeling.groovy {
+        // Using property observer - didSet to dirty the layout everytime the feeling var changes state.
         didSet {
+            // Triggers layoutSubViews at the next frame update
             setNeedsLayout()
         }
     }
