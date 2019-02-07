@@ -8,6 +8,8 @@
 
 import UIKit
 
+/** A view that displays emjoi based on feelings. 🥴
+ */
 @IBDesignable
 class EmojiView: UIView {
 
