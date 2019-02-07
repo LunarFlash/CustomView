@@ -51,12 +51,14 @@ class EmojiView: UIView {
         commonInit()
     }
 
+    /// Shared initlialization code
     private func commonInit() {
-        // load the xib file
+        // Load the xib file
         Bundle.main.loadNibNamed(EmojiView.xibName, owner: self, options: nil)
         addSubview(contentView)
-        // use bounds not frame or it'll be offset
+        // Use bounds not frame or it'll be offset
         contentView.frame = bounds
+        // Make the view stretch with containing view
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 
