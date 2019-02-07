@@ -8,7 +8,8 @@
 
 import UIKit
 
-/** A view that displays emjoi based on feelings. 🥴
+/**
+ A view that displays emjoi based on feelings. 🥴
  Set the feeling property to change the content in this view.
  */
 @IBDesignable
