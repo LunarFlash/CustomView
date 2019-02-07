@@ -42,6 +42,7 @@
                 <constraint firstItem="HVv-7A-4Oy" firstAttribute="centerX" secondItem="ueu-em-aQA" secondAttribute="centerX" id="Zpg-qX-Qut"/>
                 <constraint firstItem="M5Z-sR-ud3" firstAttribute="firstBaseline" secondItem="HVv-7A-4Oy" secondAttribute="baseline" constant="48" symbolType="layoutAnchor" id="yte-DL-xyT"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Pvz-35-lMw"/>
             <point key="canvasLocation" x="110" y="-40"/>
         </view>

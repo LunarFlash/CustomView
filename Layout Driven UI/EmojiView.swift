@@ -17,7 +17,7 @@ class EmojiView: UIView {
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var feelingLabel: UILabel!
 
-
+    /// Possible states of feeling
     enum Feeling {
         case groovy
         case meh
@@ -32,6 +32,7 @@ class EmojiView: UIView {
         }
     }
 
+    // Called after the view and its subviews were allocated and initialized. It is guaranteed that the view will have all its outlet instance variables set. If initWithCoder: is the beginning of the nib unarchiving process, then awakeFromNib is the end.
     override func awakeFromNib() {
         super.awakeFromNib()
     }
