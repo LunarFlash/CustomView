@@ -66,7 +66,6 @@ class EmojiView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        guard emojiLabel != nil, feelingLabel != nil else { return }
         changeFeeling(feeling)
     }
 
