@@ -53,7 +53,7 @@ class EmojiView: UIView {
 
     /// Shared initlialization code
     private func commonInit() {
-        // Load the xib file
+        // Load the xib file, after this line contentView would no longer be nil
         Bundle.main.loadNibNamed(EmojiView.xibName, owner: self, options: nil)
         addSubview(contentView)
         // Use bounds not frame or it'll be offset
