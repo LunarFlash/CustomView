@@ -9,6 +9,7 @@
 import UIKit
 
 /** A view that displays emjoi based on feelings. 🥴
+ Set the feeling property to change the content in this view.
  */
 @IBDesignable
 class EmojiView: UIView {
@@ -64,9 +65,7 @@ class EmojiView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-
         guard emojiLabel != nil, feelingLabel != nil else { return }
-
         changeFeeling(feeling)
     }
 
