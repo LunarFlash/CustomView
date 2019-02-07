@@ -82,7 +82,7 @@ class EmojiView: UIView {
                 self.emojiLabel.text = "😐"
                 self.feelingLabel.text = "Meh"
             }
-            }, completion: nil)
+        }, completion: nil)
     }
 
 }
