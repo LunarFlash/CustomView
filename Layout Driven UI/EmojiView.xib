@@ -11,6 +11,9 @@
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmojiView" customModule="Layout_Driven_UI" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="EmojiView"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="contentView" destination="ueu-em-aQA" id="yoJ-pj-C74"/>
                 <outlet property="emojiLabel" destination="HVv-7A-4Oy" id="Y47-JJ-KuC"/>

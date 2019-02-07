@@ -17,6 +17,8 @@ class EmojiView: UIView {
 
     private static let xibName = "EmojiView"
 
+    @IBInspectable var nibName:String?
+
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var feelingLabel: UILabel!
@@ -29,9 +31,9 @@ class EmojiView: UIView {
 
     /// State variable denoting the feeling of this view.
     var feeling: Feeling = Feeling.groovy {
-        // Using property observer - didSet to dirty the layout everytime the feeling var changes state.
+        // didSet is a property observer that triggers when this variable changes
         didSet {
-            // Triggers layoutSubViews at the next frame update
+            // Dirty the layout, triggers layoutSubViews at the next frame update
             setNeedsLayout()
         }
     }
@@ -39,29 +41,27 @@ class EmojiView: UIView {
     // Called after the view and its subviews were allocated and initialized. It is guaranteed that the view will have all its outlet instance variables set. If initWithCoder: is the beginning of the nib unarchiving process, then awakeFromNib is the end.
     override func awakeFromNib() {
         super.awakeFromNib()
+        xibSetup()
     }
 
-    // To init view from xib or storyboard
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-
-    // To init from code
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-
-    /// Shared initlialization code
-    private func commonInit() {
-        // Load the xib file, after this line contentView would no longer be nil
-        Bundle.main.loadNibNamed(EmojiView.xibName, owner: self, options: nil)
-        addSubview(contentView)
+    /// Setup the xib's view and add it to our current EmojiView
+    func xibSetup() {
+        guard let view = loadViewFromNib() else { return }
         // Use bounds not frame or it'll be offset
-        contentView.frame = bounds
+        view.frame = bounds
         // Make the view stretch with containing view
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(view)
+    }
+
+    /// Load the xib file and return in the view
+    func loadViewFromNib() -> UIView? {
+        guard let nibName = nibName else { return nil }
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        return nib.instantiate(
+            withOwner: self,
+            options: nil).first as? UIView
     }
 
     override func layoutSubviews() {
@@ -87,6 +87,12 @@ class EmojiView: UIView {
                 self.feelingLabel.text = "Meh"
             }
         }, completion: nil)
+    }
+
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        xibSetup()
+        contentView.prepareForInterfaceBuilder()
     }
 
 }
