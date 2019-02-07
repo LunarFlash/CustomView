@@ -67,16 +67,27 @@ class EmojiView: UIView {
 
         guard emojiLabel != nil, feelingLabel != nil else { return }
 
-        switch feeling {
-        case .groovy:
-            emojiLabel.text = "😎"
-            feelingLabel.text = "Feeling Irie"
-        case .meh:
-            emojiLabel.text = "😐"
-            feelingLabel.text = "Meh"
-        }
+        changeFeeling(feeling)
+    }
+
+    private func changeFeeling(_ feeling: Feeling) {
+        guard emojiLabel != nil, feelingLabel != nil else { return }
+
+        UIView.transition(with: emojiLabel, duration: 1, options: .transitionFlipFromTop, animations: {
+            switch feeling {
+            case .groovy:
+                self.emojiLabel.text = "😎"
+                self.feelingLabel.text = "Feeling Irie"
+            case .meh:
+                self.emojiLabel.text = "😐"
+                self.feelingLabel.text = "Meh"
+            }
+            }, completion: nil)
     }
 
 }
+
+
+
 
 
