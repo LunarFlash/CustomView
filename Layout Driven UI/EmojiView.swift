@@ -70,9 +70,14 @@ class EmojiView: UIView {
         changeFeeling(feeling)
     }
 
+    /**
+     Handles UI code to change feeling of this view.
+     - Parameters:
+        - feeling: The Feeling we are trying to change to.
+    */
     private func changeFeeling(_ feeling: Feeling) {
         guard emojiLabel != nil, feelingLabel != nil else { return }
-
+        // Animate the change of text in our labels
         UIView.transition(with: emojiLabel, duration: 1, options: .transitionFlipFromTop, animations: {
             switch feeling {
             case .groovy:
