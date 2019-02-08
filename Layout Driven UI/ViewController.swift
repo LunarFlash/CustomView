@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var emojiView: EmojiView!
 
-    @IBAction func didSelectFeeling(_ sender: UISegmentedControl) {
+    @IBAction func didSelectMood(_ sender: UISegmentedControl) {
         emojiView.mood = sender.selectedSegmentIndex == 0 ? .groovy : .meh
     }
 
