@@ -15,12 +15,13 @@ import UIKit
  */
 @IBDesignable
 class EmojiView: UIView, Xibable {
+
     /// Label used to show an emoji that depicts the mood of this view.
     @IBOutlet weak var emojiLabel: UILabel!
     /// Label used to show test describing the feeling inspired by the current moode.
     @IBOutlet weak var feelingLabel: UILabel!
 
-    /// file name of the nib - set in IB
+    /// file name of the nib - set in Storyboard's attributes inspector for the view instance.
     @IBInspectable var nibName: String?
 
     /// Possible states of mood which drives UI changes in this EmojiView.
@@ -54,12 +55,15 @@ class EmojiView: UIView, Xibable {
         super.prepareForInterfaceBuilder()
         xibSetup()
     }
+}
 
+// MARK: - Helpers
+extension EmojiView {
     /**
      Handles UI code to change feeling of this view.
      - Parameters:
-        - feeling: The Feeling we are trying to change to.
-    */
+     - feeling: The Feeling we are trying to change to.
+     */
     private func changeMood(_ mood: Mood) {
         guard emojiLabel != nil, feelingLabel != nil else { return }
         // Animate the change of text in our labels
@@ -75,8 +79,6 @@ class EmojiView: UIView, Xibable {
         }, completion: nil)
     }
 }
-
-
 
 
 
