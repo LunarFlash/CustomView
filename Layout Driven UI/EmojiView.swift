@@ -32,7 +32,7 @@ class EmojiView: UIView, Xibable {
     var feeling: Feeling = Feeling.groovy {
         // didSet is a property observer that triggers when this variable changes
         didSet {
-            // Dirty the layout, triggers layoutSubViews at the next frame update
+            // Dirty the layout, triggers layoutSubViews at the next drawing update
             setNeedsLayout()
         }
     }
