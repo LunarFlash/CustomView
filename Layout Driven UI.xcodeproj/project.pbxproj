@@ -62,15 +62,23 @@
 			children = (
 				9D875451220B507F0049BE4E /* AppDelegate.swift */,
 				9D875453220B507F0049BE4E /* ViewController.swift */,
-				9D875465220B7C880049BE4E /* EmojiView.xib */,
 				9D875455220B507F0049BE4E /* Main.storyboard */,
+				9DD967DF220D2668000A1501 /* Emoji View */,
 				9D875458220B50810049BE4E /* Assets.xcassets */,
 				9D87545A220B50810049BE4E /* LaunchScreen.storyboard */,
 				9D87545D220B50810049BE4E /* Info.plist */,
-				9D875463220B56550049BE4E /* EmojiView.swift */,
 				9DD967DD220CFE0C000A1501 /* Xibable.swift */,
 			);
 			path = "Layout Driven UI";
+			sourceTree = "<group>";
+		};
+		9DD967DF220D2668000A1501 /* Emoji View */ = {
+			isa = PBXGroup;
+			children = (
+				9D875465220B7C880049BE4E /* EmojiView.xib */,
+				9D875463220B56550049BE4E /* EmojiView.swift */,
+			);
+			path = "Emoji View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
