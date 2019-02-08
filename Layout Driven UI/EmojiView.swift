@@ -11,6 +11,7 @@ import UIKit
 /**
  A view that displays emjoi based on feelings. 🥴
  Set the feeling property to change the content in this view.
+ - Remark: This view is meant to be instantiated from a xib file: EmojiView.xib
  */
 @IBDesignable
 class EmojiView: UIView, Xibable {
