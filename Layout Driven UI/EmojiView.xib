@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmojiView" customModule="Layout_Driven_UI" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="EmojiView"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="emojiLabel" destination="HVv-7A-4Oy" id="Y47-JJ-KuC"/>
+                <outlet property="feelingLabel" destination="M5Z-sR-ud3" id="Nmw-Xb-V6z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ueu-em-aQA">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVv-7A-4Oy">
+                    <rect key="frame" x="122.5" y="262" width="130" height="143"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling groovy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-sR-ud3">
+                    <rect key="frame" x="131.5" y="408" width="112" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="M5Z-sR-ud3" firstAttribute="centerX" secondItem="ueu-em-aQA" secondAttribute="centerX" id="2vf-v8-wvx"/>
+                <constraint firstItem="HVv-7A-4Oy" firstAttribute="centerY" secondItem="ueu-em-aQA" secondAttribute="centerY" id="F79-cQ-kij"/>
+                <constraint firstItem="HVv-7A-4Oy" firstAttribute="centerX" secondItem="ueu-em-aQA" secondAttribute="centerX" id="Zpg-qX-Qut"/>
+                <constraint firstItem="M5Z-sR-ud3" firstAttribute="firstBaseline" secondItem="HVv-7A-4Oy" secondAttribute="baseline" constant="48" symbolType="layoutAnchor" id="yte-DL-xyT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Pvz-35-lMw"/>
+            <point key="canvasLocation" x="110" y="-40"/>
+        </view>
+    </objects>
+</document>
