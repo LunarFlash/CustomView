@@ -8,8 +8,11 @@
 
 import UIKit
 
+/**
+ Protocol intended for UIView subclasses that are intantiated from Xib, allowing easy integration with Storyboard.
+ */
 protocol Xibable: class {
-
+    /// File name of the xib
     var nibName: String? { get }
 }
 
