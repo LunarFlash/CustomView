@@ -29,7 +29,7 @@ extension Xibable {
     }
 
     /// Load the xib file and return in the view
-    func loadViewFromNib() -> UIView? {
+    private func loadViewFromNib() -> UIView? {
         guard let nibName = nibName else { return nil }
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
