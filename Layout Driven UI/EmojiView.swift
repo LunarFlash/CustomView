@@ -21,7 +21,7 @@ class EmojiView: UIView, Xibable {
     /// file name of the nib - set in IB
     @IBInspectable var nibName: String?
 
-    /// Possible states of feeling
+    /// Possible states of feeling which drives UI changes in this EmojiView.
     enum Feeling {
         case groovy
         case meh
