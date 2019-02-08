@@ -9,8 +9,8 @@
 import UIKit
 
 /**
- A view that displays emjoi based on feelings. 🥴
- Set the feeling property to change the content in this view.
+ A view that displays emjoi based on moods. 🥴
+ Set the mood property to change the content in this view.
  - Remark: This view is meant to be instantiated from a xib file: EmojiView.xib
  */
 @IBDesignable
@@ -22,14 +22,14 @@ class EmojiView: UIView, Xibable {
     /// file name of the nib - set in IB
     @IBInspectable var nibName: String?
 
-    /// Possible states of feeling which drives UI changes in this EmojiView.
-    enum Feeling {
+    /// Possible states of mood which drives UI changes in this EmojiView.
+    enum Mood {
         case groovy
         case meh
     }
 
-    /// State variable denoting the feeling of this view.
-    var feeling: Feeling = Feeling.groovy {
+    /// State variable denoting the mood of this view.
+    var mood: Mood = Mood.groovy {
         // didSet is a property observer that triggers when this variable changes
         didSet {
             // Dirty the layout, triggers layoutSubViews at the next drawing update
@@ -45,7 +45,7 @@ class EmojiView: UIView, Xibable {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        changeFeeling(feeling)
+        changeMood(mood)
     }
 
     // Implement this to allow storyboard to render our custom view.
@@ -59,11 +59,11 @@ class EmojiView: UIView, Xibable {
      - Parameters:
         - feeling: The Feeling we are trying to change to.
     */
-    private func changeFeeling(_ feeling: Feeling) {
+    private func changeMood(_ mood: Mood) {
         guard emojiLabel != nil, feelingLabel != nil else { return }
         // Animate the change of text in our labels
         UIView.transition(with: emojiLabel, duration: 1, options: .transitionFlipFromTop, animations: {
-            switch feeling {
+            switch mood {
             case .groovy:
                 self.emojiLabel.text = "😎"
                 self.feelingLabel.text = "Feeling Irie"
