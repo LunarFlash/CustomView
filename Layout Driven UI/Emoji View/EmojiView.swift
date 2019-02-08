@@ -60,7 +60,7 @@ class EmojiView: UIView, Xibable {
 // MARK: - Helpers
 extension EmojiView {
     /**
-     Handles UI code to change feeling of this view.
+     Handles UI code to change mood of this view.
      - Parameters:
      - mood: The Feeling we are trying to change to.
      */
