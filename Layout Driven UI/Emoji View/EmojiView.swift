@@ -34,7 +34,7 @@ class EmojiView: UIView, Xibable {
     var mood: Mood = Mood.groovy {
         // didSet is a property observer that triggers when this variable changes
         didSet {
-            // Dirty the layout, triggers layoutSubViews at the next drawing update
+            // Dirty the layout, triggers layoutSubViews at the next update cycle.
             setNeedsLayout()
         }
     }
