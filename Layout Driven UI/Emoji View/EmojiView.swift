@@ -47,7 +47,7 @@ class EmojiView: UIView, Xibable {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        setMood(mood)
+        updateUI(mood)
     }
 
     // Implement this to allow storyboard to render our custom view.
@@ -62,9 +62,9 @@ extension EmojiView {
     /**
      Handles UI code to change feeling of this view.
      - Parameters:
-     - feeling: The Feeling we are trying to change to.
+     - mood: The Feeling we are trying to change to.
      */
-    private func setMood(_ mood: Mood) {
+    private func updateUI(_ mood: Mood) {
         guard emojiLabel != nil, feelingLabel != nil else { return }
         // Animate the change of text in our labels
         UIView.transition(with: emojiLabel, duration: 1, options: .transitionFlipFromTop, animations: {
