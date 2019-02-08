@@ -25,7 +25,7 @@
                                     <segment title="Meh"/>
                                 </segments>
                                 <connections>
-                                    <action selector="didSelectMood:" destination="BYZ-38-t0r" eventType="valueChanged" id="70Y-6o-Bhd"/>
+                                    <action selector="didSelectFeeling:" destination="BYZ-38-t0r" eventType="valueChanged" id="70Y-6o-Bhd"/>
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXy-bv-DaE" customClass="EmojiView" customModule="Layout_Driven_UI" customModuleProvider="target">
