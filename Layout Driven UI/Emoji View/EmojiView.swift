@@ -15,8 +15,9 @@ import UIKit
  */
 @IBDesignable
 class EmojiView: UIView, Xibable {
-
+    /// Label used to show an emoji that depicts the mood of this view.
     @IBOutlet weak var emojiLabel: UILabel!
+    /// Label used to show test describing the feeling inspired by the current moode.
     @IBOutlet weak var feelingLabel: UILabel!
 
     /// file name of the nib - set in IB
