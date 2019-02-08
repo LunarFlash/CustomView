@@ -9,7 +9,7 @@
 import UIKit
 
 /**
- A view that displays emjoi based on moods. 🥴
+ A view that displays emoji based on moods. 🥴
  Set the mood property to change the content in this view.
  - Remark: This view is meant to be instantiated from a xib file: EmojiView.xib
  */
